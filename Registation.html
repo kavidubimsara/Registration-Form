@@ -4,121 +4,185 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employee Registration</title>
-
-    <style>
-        body{
-            font-family: Arial, Helvetica, sans-serif; 
-            }
-            
-    </style>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <title>Sidebar Navigation</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="./Rg.css">
+    
 </head>
 <body>
     <div class="header">
-        <img src="./logo.png" alt="">
-        <i class="fa-regular fa-bars"></i>
-        <i class="fa-duotone fa-circle-user"></i>
-        <i class="fa-regular fa-bars"></i>
+        <img src="./logo.png" alt="logo">
+        
     </div>
-
-<!--   Registration Form   -->
     <div class="content">
+       
         <div class="navbar">
-            <div class="form">
-                <h1>Employee Registration</h1>
-            <!-- Employee Name -->
-                <h3>Employee Name</h3><hr>
 
-                <label for="surname">Surname</label>
-                <input type="text " placeholder="Enter Your surname">
-
-                <label for="first-name">First Name</label>
-                <input type="text " placeholder="Enter Your first name">
-
-                <label for="middle-name">Middle Name</label>
-                <input type="text " placeholder="Enter Your middle name">
-
-                <label for="last-name">Last Name</label>
-                <input type="text " placeholder="Enter Your last name">
-
-                
-                
-
-            <!-- Employee  Details-->
-                <h3>Employee Name</h3><hr>
-
-                <label for="emp-id">Employee ID</label>
-                <input type="text " placeholder="Enter Your Employee ID">
-
-                <label for="designation">Designation</label>
-                <input type="text " placeholder="Enter Your designation">
-
-                <label for="reporting-manager">Reporting Manager</label>
-                <input type="text " placeholder="Enter Your Reporting Manager">
-
-                <label for="com-email">Company Email</label>
-                <input type="email " placeholder="Enter Your company e-mail">                
-
-                <label for="appointment">Date of Appoinment</label>
-                <input type="date" name="appointment">
-
-            <!-- Employee Bank Information -->
-                <h3>Contact Information</h3><hr>
-
-                <label for="phone">Phone Number</label>
-                <input type="tel" placeholder="Enter Your Phone Number">
-
-                <label for="address">Address</label>
-                <input type="text " placeholder="Enter Your address">
-
-            <!-- Employee Bank Information -->
-                <h3>Bank Information</h3><hr>
-
-                <label for="birthday">Birthday</label>
-                <input type="date " placeholder="Enter Your Birthday">
-
-                <label for="gender">Gender</label>
-                <input type="text " placeholder="Enter Your gender">
-
-                <label for="age">Age</label>
-                <input type="text " placeholder="Enter Your age">
-
-            <!-- Employee Login Information -->
-                <h3>Login Information</h3><hr>
-
-                <label for="password">Password</label>
-                <input type="password" id="pwd" name="pwd" minlength="8" placeholder="********">
-
-                <label for="Confirm-password">Confirm Password</label>
-                <input type="password" id="con-pwd" name="con-pwd" minlength="8" placeholder="********">
-
-            <!-- Additional Information -->
-                <h3>Additional Information</h3><hr>
-
-                <label for="Confirm-password">Confirm Password</label>
-                <textarea name="massege" id="" cols="30" rows="10" placeholder="Enter Text here"></textarea>
-
-                <div class="clearfix">
-                    <button type="submit" class="registerbtn"> Register</button>
-                    <button type="button" class="cancelbtn"> Cancel</button>
-                </div>
-
-            </div>
         </div>
+
+    </div>
+    
+<!--Sidebar-->
+
+<div class="sidebar">
+        
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'userprofile')" id="defaultOpen"> <a href="#contact"><i class="fa fa-user-o"></i> User Profile</a></button>
+        <p>Time Sheets</p>
+        <button class="tablinks" onclick="openCity(event, 'previoustimesheet')"><a href="#home"><i class="fa fa-star-o"></i> Previous Timesheet</a></button>
+        <button class="tablinks" onclick="openCity(event, 'currenttimesheet')"><a href="#clients"><i class="fa fa-star-o"></i> Current Timesheet</a></button>
+        <button class="tablinks" onclick="openCity(event, 'summary')"><a href="#clients"><i class="fa fa-star-o"></i> Summary</a></button>
+        <p>Admin</p>
+        <button class="tablinks" onclick="openCity(event, 'employeeregistration')"><a href="#clients"><i class="fa fa-star-o"></i> Employee Registration</a></button>
+        <button class="tablinks" onclick="openCity(event, 'employeeinformation')"><a href="#clients"><i class="fa fa-star-o"></i> Employee Information</a></button>      
+    </div>
+</div>
+
+
+  
+  <div id="previoustimesheet" class="tabcontent">
+    <h3>Previous Timesheet</h3>
+    <p>Previous Timesheet.</p> 
+  </div>
+
+  <div id="currenttimesheet" class="tabcontent">
+    <h3>Current Timesheet</h3>
+    <p>Current Timesheet.</p> 
+  </div>
+  
+  <div id="summary" class="tabcontent">
+    <form class="w3-container w3-card-4 w3-light-grey w3-cell w3-round-large">
+        <h2>Bordered Input</h2>
+        <p>Add the w3-border class to create bordered inputs.</p>
+      
+        <p><label>First Name</label>
+        <input class="w3-input w3-border w3-round-large" name="first" type="text"></p>
+      
+        <p><label>Last Name</label>
+        <input class="w3-input w3-border w3-round-large" name="last" type="text"></p>
+      </form>
+  </div>
+
+  <div id="employeeregistration" class="tabcontent">
+      
+    
+    <div class="content">
+            
+        <form class="w3-container w3-card-4 w3-light-grey w3-round-large">
+            <h1>Employee Registration</h1>
+        <!-- Employee Name -->
+            <h3>Employee Name</h3><hr style="height: 1px;border-width:0;color:rgb(167, 166, 166);background-color:rgb(167, 166, 166)">
+
+            <label for="surname">Surname</label>
+            <input class="w3-input w3-border w3-round-large" type="text " placeholder="Enter Your surname" required>
+
+            <label for="first-name">First Name</label>
+            <input class="w3-input w3-border w3-round-large" type="text " placeholder="Enter Your first name"  required>
+
+            <label for="middle-name">Middle Name</label>
+            <input class="w3-input w3-border w3-round-large" type="text " placeholder="Enter Your middle name" required>
+
+            <label for="last-name">Last Name</label>
+            <input class="w3-input w3-border w3-round-large" type="text " placeholder="Enter Your last name" required>
+
+            
+            
+
+        <!-- Employee  Details-->
+            <h3>Employee Name</h3><hr style="height: 1px;border-width:0;color:rgb(167, 166, 166);background-color:rgb(167, 166, 166)">
+
+            <label for="emp-id">Employee ID</label>
+            <input class="w3-input w3-border w3-round-large" type="text " placeholder="Enter Your Employee ID" required>
+
+            <label for="designation">Designation</label>
+            <input class="w3-input w3-border w3-round-large" type="text " placeholder="Enter Your designation" required>
+
+            <label for="reporting-manager">Reporting Manager</label>
+            <input class="w3-input w3-border w3-round-large" type="text " placeholder="Enter Your Reporting Manager" required>
+
+            <label for="com-email">Company Email</label>
+            <input class="w3-input w3-border w3-round-large" type="email " placeholder="Enter Your company e-mail" required>                
+
+            <label for="appointment">Date of Appoinment</label>
+            <input class="w3-input w3-border w3-round-large" type="date" name="appointment" required>
+
+        <!-- Employee Bank Information -->
+            <h3>Contact Information</h3><hr style="height: 1px;border-width:0;color:rgb(167, 166, 166);background-color:rgb(167, 166, 166)">
+
+            <label for="phone">Phone Number</label>
+            <input class="w3-input w3-border w3-round-large" type="tel" placeholder="Enter Your Phone Number" required>
+
+            <label for="address">Address</label>
+            <input class="w3-input w3-border w3-round-large" type="text " placeholder="Enter Your address" required>
+
+        <!-- Employee Bank Information -->
+            <h3>Bank Information</h3><hr style="height: 1px;border-width:0;color:rgb(167, 166, 166);background-color:rgb(167, 166, 166)">
+
+            <label for="birthday">Birthday</label>
+            <input class="w3-input w3-border w3-round-large" type="date " placeholder="Enter Your Birthday" required>
+
+            <label for="gender">Gender</label>
+            <input class="w3-input w3-border w3-round-large" type="text " placeholder="Enter Your gender" required>
+
+            <label for="age">Age</label>
+            <input class="w3-input w3-border w3-round-large" type="text " placeholder="Enter Your age" required>
+
+        <!-- Employee Login Information -->
+            <h3>Login Information</h3><hr style="height: 1px;border-width:0;color:rgb(167, 166, 166);background-color:rgb(167, 166, 166)">
+
+            <label for="password">Password</label>
+            <input class="w3-input w3-border w3-round-large" type="password" id="pwd" name="pwd" minlength="8" placeholder="********" required>
+
+            <label for="Confirm-password">Confirm Password</label>
+            <input class="w3-input w3-border w3-round-large" type="password" id="con-pwd" name="con-pwd" minlength="8" placeholder="********" required>
+
+        <!-- Additional Information -->
+            <h3>Additional Information</h3><hr style="height: 1px;border-width:0;color:rgb(167, 166, 166);background-color:rgb(167, 166, 166)">
+
+            <label for="Confirm-password">Confirm Password</label>
+            <textarea class="w3-input w3-border w3-round-large" name="massege" id="" cols="10" rows="5" placeholder="Enter Text here" required></textarea>
+
+            <div class="clearfix">
+                <button type="submit" class="registerbtn"> Register</button>
+                <button type="button" class="cancelbtn"> Cancel</button>
+            </div>
+
+        </form>
     </div>
 
-
-    <div class="sidebar">
-        <ul>
-            <li><a href="#User Profile"><i class=""><span>User Profile</span></i></a></li>
-            <li><a href="#Previous Timesheet"><i class=""><span>Previous Timesheet</span></i></a></li>
-            <li><a href="#Current Timesheet"><i class=""><span>Current Timesheet</span></i></a></li>
-            <li><a href="#Summary"><i class=""><span>Summary</span></i></a></li>
-            <li><a href="#Employee Registration"><i class=""><span>Employee Registration</span></i></a></li>
-            <li><a href="#Employee Information"><i class=""><span>Employee Information</span></i></a></li>
-        </ul>
-    </div>
+</div>
 
 
+
+  </div>
+
+  <div id="employeeinformation" class="tabcontent">
+    <h3>Employee Information</h3>
+    <p>Employee Information.</p>
+  </div>
+
+
+ <!--Script-->
+  <script>
+  function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+  
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+  </script> 
+    
 </body>
 </html>
